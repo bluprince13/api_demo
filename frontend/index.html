@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Average</title>
+	</head>
+	<body>
+		<p>This is a simple frontend to get the average of two numbers.</p>
+		<label for="a">a:</label>
+		<input type="text" id="a" name="a" /><br /><br />
+		<label for="b">b:</label>
+		<input type="text" id="b" name="b" /><br /><br />
+		<button type="button" onclick="getAverage()">Get average</button>
+		<p id="answer">The average is.</p>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script>
+			const getAverage = () => {
+				const a = document.getElementById("a").value;
+				const b = document.getElementById("b").value;
+				const showAnswer = document.getElementById("answer");
+
+				console.log(`Making a request to find average for ${a} and ${b}.`);
+				axios
+					.post("http://127.0.0.1:3000/average", { a, b })
+					.then((response) => {
+						const average = response.data.average;
+						showAnswer.innerHTML = `The average is ${average}.`;
+					})
+					.catch((error) => console.error(error));
+			};
+		</script>
+	</body>
+</html>
