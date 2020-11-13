@@ -23,18 +23,18 @@ Run the following in three separate terminal windows.
     cd python
     pipenv install
     pipenv shell
-    python main.py // serves the POST /add api on localhost:5000
+    python main.py # serves the POST /add api on localhost:5000
 ```
 
 ```bash
     cd js
     yarn install
-    yarn run start // serves the POST /average api on localhost:3000
+    yarn run start # serves the POST /average api on localhost:3000
 ```
 
 ```bash
     cd js
-    yarn run serve // serves the frontend locally
+    yarn run serve # serves the frontend locally
 ```
 
 That's all, folks.
