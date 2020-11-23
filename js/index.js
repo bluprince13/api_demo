@@ -30,11 +30,6 @@ const getAverage = async ({ a, b }) => {
 	return sum;
 };
 
-// hello world handler
-app.get("/", (req, res) => {
-	res.send("Hello World!");
-});
-
 // average handler
 app.post("/average", async (req, res) => {
 	console.log("JS average calculator");

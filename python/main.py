@@ -8,12 +8,6 @@ app = Flask(__name__)
 def add(a, b):
     return a + b
 
-# hello handler which takes your name as input
-@app.route("/")
-def handleHello():
-    name = request.args.get("name")
-    return "Hello, {}!".format(name)
-
 # add handler
 @app.route("/add", methods=["POST"])
 def handleAdd():
@@ -24,7 +18,7 @@ def handleAdd():
     print("Received request to add {} and {}".format(a, b))
     result = add(a, b)
     print("Sum is {}".format(result))
-    result = {"sum": add(a, b)}
+    result = {"sum": result}
     return jsonify(result)
 
 if __name__ == "__main__":
