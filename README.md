@@ -6,6 +6,8 @@ simple as possible, and this definitely is not typical of production code. This
 example also does not include any architecture and only runs locally on your
 machine.
 
+You can watch me demo this here: https://youtu.be/FnYccT9Q6i4
+
 There are three folders.
 
 - **js**: JavaScript package with an API to find average of two numbers
