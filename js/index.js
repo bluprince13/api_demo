@@ -26,8 +26,9 @@ const apiPostAdd = async ({ a, b }) => {
 
 // logic for getting average
 const getAverage = async ({ a, b }) => {
-	const sum = (await apiPostAdd({ a, b })) / 2;
-	return sum;
+	const sum = await apiPostAdd({ a, b });
+	const average = sum/2
+	return average;
 };
 
 // average handler
